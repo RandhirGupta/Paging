@@ -40,6 +40,9 @@ dependencies {
     implementation(PagingConfig.Libs.Rx.rxKotlin)
     implementation(PagingConfig.Libs.Rx.rxAndroid)
 
+    implementation(PagingConfig.Libs.Arch.lifeCycle)
+    implementation(PagingConfig.Libs.Arch.lifeCycleReactiveStream)
+
     implementation(PagingConfig.Libs.Dagger.daggerAndroid)
     implementation(PagingConfig.Libs.Dagger.daggerAndroidSupport)
 

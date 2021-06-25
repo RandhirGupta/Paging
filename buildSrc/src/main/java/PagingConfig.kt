@@ -10,7 +10,7 @@ object PagingConfig {
     }
 
     object Plugins {
-        const val androidPlugin = "com.android.tools.build:gradle:3.5.1"
+        const val androidPlugin = "com.android.tools.build:gradle:4.2.0"
         const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 
@@ -30,6 +30,13 @@ object PagingConfig {
             const val materialDesign = "com.google.android.material:material:1.3.0"
         }
 
+        object Arch {
+            private const val lifeCycleVersion = "2.0.0"
+
+            const val lifeCycle = "androidx.lifecycle:lifecycle-extensions:$lifeCycleVersion"
+            const val lifeCycleReactiveStream =
+                "androidx.lifecycle:lifecycle-reactivestreams:$lifeCycleVersion"
+        }
 
         object Misc {
             private const val retrofitVersion = "2.4.0"
