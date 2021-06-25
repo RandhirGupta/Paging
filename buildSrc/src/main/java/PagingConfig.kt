@@ -46,7 +46,7 @@ object PagingConfig {
             private const val retrofitVersion = "2.4.0"
             private const val okHttpVersion = "3.11.0"
             private const val glideVersion = "4.8.0"
-            private const val paging = "2.1.2"
+            private const val paging = "3.0.0"
 
             const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
             const val retrofitGSONConverter =

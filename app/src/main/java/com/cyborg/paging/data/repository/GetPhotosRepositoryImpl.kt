@@ -39,7 +39,9 @@ class GetPhotosRepositoryImpl @Inject constructor(
         }
 
         this.text = text
-        return RxPagedListBuilder(localSource.getPhotos(text), Query.PER_PAGE_VALUE)
+        return RxPagedListBuilder(localSource.getPhotos(text),
+            PagedList.Config.Builder().setPrefetchDistance(5).setPageSize(Query.PER_PAGE_VALUE)
+                .build())
             .setBoundaryCallback(PagePhotoBoundaryCallback(this))
             .buildObservable()
     }

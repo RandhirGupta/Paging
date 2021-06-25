@@ -9,10 +9,6 @@ class PagePhotoBoundaryCallback(
 ) :
     PagedList.BoundaryCallback<PhotoEntity>() {
 
-    companion object {
-        private const val TAG = "PagePhotoBoundaryCallback"
-    }
-
     var isRunning = false
     var currentPage = 1
     var disposable: Disposable? = null
