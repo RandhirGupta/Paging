@@ -42,6 +42,9 @@ dependencies {
 
     implementation(PagingConfig.Libs.Arch.lifeCycle)
     implementation(PagingConfig.Libs.Arch.lifeCycleReactiveStream)
+    implementation(PagingConfig.Libs.Arch.room)
+    kapt(PagingConfig.Libs.Arch.roomCompiler)
+    implementation(PagingConfig.Libs.Arch.roomRxJava)
 
     implementation(PagingConfig.Libs.Dagger.daggerAndroid)
     implementation(PagingConfig.Libs.Dagger.daggerAndroidSupport)
@@ -52,6 +55,8 @@ dependencies {
     implementation(PagingConfig.Libs.Misc.okHttpInterceptor)
     implementation(PagingConfig.Libs.Misc.retrofitAdapter)
     implementation(PagingConfig.Libs.Misc.glide)
+    implementation(PagingConfig.Libs.Misc.pagingRuntime)
+    implementation(PagingConfig.Libs.Misc.pagingRxJava)
 
     kapt(PagingConfig.Libs.Dagger.daggerCompiler)
     kapt(PagingConfig.Libs.Dagger.daggerAndroidCompiler)

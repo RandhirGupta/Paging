@@ -1,15 +1,12 @@
 package com.cyborg.paging.data.repository
 
-import com.cyborg.paging.data.model.PhotoModel
-import io.reactivex.Single
+import androidx.paging.PagedList
+import com.cyborg.paging.data.entity.PhotoEntity
+import io.reactivex.Observable
+import io.reactivex.disposables.Disposable
 
 interface GetPhotosRepository {
-    fun getPhotosFromNetwork(
-        method: String,
-        apiKey: String,
-        text: String,
-        format: String,
-        noJsonCallback: Int,
-        perPage: Int
-    ): Single<PhotoModel>
+    fun fetchPhotosNextPage(text: String): Observable<PagedList<PhotoEntity>>
+
+    fun disposable(): Disposable?
 }

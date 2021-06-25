@@ -1,5 +1,12 @@
 package com.cyborg.paging.data.network
 
+import com.cyborg.paging.data.Query.API_KEY
+import com.cyborg.paging.data.Query.FORMAT
+import com.cyborg.paging.data.Query.METHOD
+import com.cyborg.paging.data.Query.NO_JSON_CALLBACK
+import com.cyborg.paging.data.Query.PAGE
+import com.cyborg.paging.data.Query.PER_PAGE
+import com.cyborg.paging.data.Query.TEXT
 import com.cyborg.paging.data.model.PhotoModel
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -9,22 +16,19 @@ interface ApiService {
 
     @GET("services/rest/")
     fun getPhotos(
-        @Query("method")
+        @Query(METHOD)
         method: String,
-
-        @Query("api_key")
+        @Query(API_KEY)
         apiKey: String,
-
-        @Query("text")
+        @Query(TEXT)
         text: String,
-
-        @Query("format")
+        @Query(FORMAT)
         format: String,
-
-        @Query("nojsoncallback")
+        @Query(NO_JSON_CALLBACK)
         noJsonCallback: Int,
-
-        @Query("per_page")
+        @Query(PER_PAGE)
         perPage: Int,
+        @Query(PAGE)
+        page: Int,
     ): Single<PhotoModel>
 }

@@ -1,5 +1,7 @@
 package com.cyborg.paging.di.module
 
+import com.cyborg.paging.data.executor.BaseSchedulerProvider
+import com.cyborg.paging.data.local.LocalSource
 import com.cyborg.paging.data.network.ApiService
 import com.cyborg.paging.data.repository.GetPhotosRepository
 import com.cyborg.paging.data.repository.GetPhotosRepositoryImpl
@@ -13,8 +15,10 @@ class RepositoryModule {
     @Singleton
     @Provides
     fun provideGetPhotosRepository(
-        apiService: ApiService
+        apiService: ApiService,
+        localSource: LocalSource,
+        schedulerProvider: BaseSchedulerProvider,
     ): GetPhotosRepository {
-        return GetPhotosRepositoryImpl(apiService)
+        return GetPhotosRepositoryImpl(apiService, localSource, schedulerProvider)
     }
 }

@@ -15,6 +15,7 @@ import javax.inject.Singleton
     modules = [AndroidSupportInjectionModule::class,
         ApplicationModule::class,
         NetworkModule::class,
+        DatabaseModule::class,
         UseCaseModule::class,
         RepositoryModule::class,
         ViewModelModule::class,
@@ -30,6 +31,7 @@ interface ApplicationComponent : AndroidInjector<PagingApplication> {
 
         fun applicationModule(applicationModule: ApplicationModule): Builder
         fun networkModule(networkModule: NetworkModule): Builder
+        fun databaseModule(databaseModule: DatabaseModule): Builder
         fun useCaseModule(useCaseModule: UseCaseModule): Builder
         fun repositoryModule(repositoryModule: RepositoryModule): Builder
         fun build(): ApplicationComponent

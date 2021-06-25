@@ -32,16 +32,21 @@ object PagingConfig {
 
         object Arch {
             private const val lifeCycleVersion = "2.0.0"
+            private const val roomVersion = "2.2.6"
 
             const val lifeCycle = "androidx.lifecycle:lifecycle-extensions:$lifeCycleVersion"
             const val lifeCycleReactiveStream =
                 "androidx.lifecycle:lifecycle-reactivestreams:$lifeCycleVersion"
+             const val room = "androidx.room:room-runtime:$roomVersion"
+             const val roomCompiler = "androidx.room:room-compiler:$roomVersion"
+             const val roomRxJava = "androidx.room:room-rxjava2:$roomVersion"
         }
 
         object Misc {
             private const val retrofitVersion = "2.4.0"
             private const val okHttpVersion = "3.11.0"
             private const val glideVersion = "4.8.0"
+            private const val paging = "2.1.2"
 
             const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
             const val retrofitGSONConverter =
@@ -50,6 +55,8 @@ object PagingConfig {
             const val okHttpInterceptor = "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
             const val retrofitAdapter = "com.squareup.retrofit2:adapter-rxjava:2.1.0"
             const val glide = "com.github.bumptech.glide:glide:$glideVersion"
+            const val pagingRuntime = "androidx.paging:paging-runtime:$paging"
+            const val pagingRxJava = "androidx.paging:paging-rxjava2:$paging"
         }
 
         object Dagger {
